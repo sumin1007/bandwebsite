@@ -1,0 +1,52 @@
+{% extends 'website/layout.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .music {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .album{
+        width:500px;
+        height:500px;
+    }
+</style>
+<br /><br /><br />
+<div class="music">
+    <div class="card">
+        <div class="album">
+            <img src="/static/website/img/album1.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">1집 - 산소생활</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+        </div>
+    </div>
+    <br />
+    <div class="card">
+        <div class="album">
+            <img src="/static/website/img/album2.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">2집 - 소발외</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+    </div>
+    <br />
+    <div class="card">
+        <div class="album">
+            <img src="/static/website/img/album3.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">3집 - Rock n Roll</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+    </div>
+    <br />
+</div>
+{% endblock %}

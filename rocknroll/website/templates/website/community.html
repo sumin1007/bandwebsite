@@ -1,0 +1,48 @@
+{% extends 'website/layout.html' %}
+{% load static %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="clearfix">
+                <a class="btn btn-primary float-right" href="{% url 'post' %}">Write Post &rarr;</a>
+            </div>
+            {% for x in posts.all %}
+            <div class="post-preview">
+                <a href="post.html">
+                    <h2 class="post-title">
+                        {{ x.title }}
+                    </h2>
+                    <h3 class="post-subtitle">
+                        {{ x.body }}
+                    </h3>
+                </a>
+                <p class="post-meta">Posted by
+                    <a href="#">{{ x.author }}</a>
+                    on September 24, 2019</p>
+            </div>
+            <hr>
+            {% endfor %}
+            <!-- Pager -->
+            <div class="clearfix">
+                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+{% endblock %}
